@@ -31,14 +31,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbNevSzures = new System.Windows.Forms.TextBox();
             this.dgvUtas = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tbUticelSzures = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbUticelSzures = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUtas)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -83,24 +83,7 @@
             this.dgvUtas.ReadOnly = true;
             this.dgvUtas.Size = new System.Drawing.Size(778, 378);
             this.dgvUtas.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.tbUticelSzures);
-            this.groupBox2.Location = new System.Drawing.Point(404, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(386, 100);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Szűrés túra útvonal célja alapján:";
-            // 
-            // tbUticelSzures
-            // 
-            this.tbUticelSzures.Location = new System.Drawing.Point(6, 43);
-            this.tbUticelSzures.Name = "tbUticelSzures";
-            this.tbUticelSzures.Size = new System.Drawing.Size(374, 26);
-            this.tbUticelSzures.TabIndex = 0;
-            this.tbUticelSzures.TextChanged += new System.EventHandler(this.TbUticelSzures_TextChanged);
+            this.dgvUtas.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvUtas_RowHeaderMouseClick);
             // 
             // Column1
             // 
@@ -137,6 +120,24 @@
             this.Column6.HeaderText = "úticél";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tbUticelSzures);
+            this.groupBox2.Location = new System.Drawing.Point(404, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(386, 100);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Szűrés túra útvonal célja alapján:";
+            // 
+            // tbUticelSzures
+            // 
+            this.tbUticelSzures.Location = new System.Drawing.Point(6, 43);
+            this.tbUticelSzures.Name = "tbUticelSzures";
+            this.tbUticelSzures.Size = new System.Drawing.Size(374, 26);
+            this.tbUticelSzures.TabIndex = 0;
+            this.tbUticelSzures.TextChanged += new System.EventHandler(this.TbUticelSzures_TextChanged);
             // 
             // FrmUtasLista
             // 

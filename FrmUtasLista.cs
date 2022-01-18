@@ -13,8 +13,10 @@ namespace WFA220117
 {
     public partial class FrmUtasLista : Form
     {
-        public FrmUtasLista()
+        private FrmUtas FrmUtas { get; set; } = null;
+        public FrmUtasLista(FrmUtas frmUtas)
         {
+            FrmUtas = frmUtas;
             InitializeComponent();
             Icon = Properties.Resources.utas;
         }
@@ -46,9 +48,22 @@ namespace WFA220117
                 {
                     dgvUtas.Rows.Add(
                         r[0], r[1], r[2], r[3],
-                        r.GetDateTime(4).ToString("yyyy.MM.dd"),
+                        r.GetDateTime(4).ToString("yyyy.MM.dd."),
                         r[5]);
                 }
+            }
+        }
+
+        private void DgvUtas_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (FrmUtas != null)
+            {
+                FrmUtas.tbUtasKod.Text = dgvUtas[0, e.RowIndex].Value.ToString();
+                FrmUtas.tbNev.Text = dgvUtas[1, e.RowIndex].Value.ToString();
+                FrmUtas.rtbCim.Text = dgvUtas[2, e.RowIndex].Value.ToString();
+                FrmUtas.cbJelentkezes.Text = dgvUtas[3, e.RowIndex].Value.ToString();
+
+                this.Close();
             }
         }
     }

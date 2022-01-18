@@ -88,7 +88,7 @@
             this.tsmiKereses.Name = "tsmiKereses";
             this.tsmiKereses.Size = new System.Drawing.Size(180, 22);
             this.tsmiKereses.Text = "Keresés";
-            this.tsmiKereses.Click += new System.EventHandler(this.tsmiKereses_Click);
+            this.tsmiKereses.Click += new System.EventHandler(this.TsmiKereses_Click);
             // 
             // tsmiIdegenvezeto
             // 
